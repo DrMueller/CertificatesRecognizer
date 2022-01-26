@@ -45,6 +45,10 @@
               "target": "Package",
               "version": "[4.0.0-beta.2, )"
             },
+            "Lamar": {
+              "target": "Package",
+              "version": "[7.1.1, )"
+            },
             "Microsoft.Extensions.Configuration": {
               "target": "Package",
               "version": "[6.0.0, )"
@@ -54,6 +58,10 @@
               "version": "[6.0.0, )"
             },
             "Microsoft.Extensions.Configuration.UserSecrets": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
               "target": "Package",
               "version": "[6.0.0, )"
             },

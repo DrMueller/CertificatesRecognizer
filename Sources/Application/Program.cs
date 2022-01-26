@@ -1,10 +1,11 @@
 ﻿using System;
 using System.IO;
 using System.Threading.Tasks;
-using Azure;
-using Azure.AI.FormRecognizer.DocumentAnalysis;
+using Lamar;
 using Microsoft.Extensions.Configuration;
+using Mmu.CertificateRecognizer.Areas.UseCase;
 using Mmu.CertificateRecognizer.Infrastructure;
+using Mmu.CertificateRecognizer.Infrastructure.Settings;
 
 namespace Mmu.CertificateRecognizer
 {
@@ -19,29 +20,20 @@ namespace Mmu.CertificateRecognizer
 
             var settings = new AppSettings();
             configRoot.Bind("AppSettings", settings);
-
-            var credential = new AzureKeyCredential(settings.ApiKey);
-            var client = new DocumentAnalysisClient(new Uri(settings.ApiEndpoint), credential);
-
-            var allFiles = Directory.GetFiles(@"D:\MyGit\Personal\Data.Certificates\Weiterbildungen\Microsoft");
-
-            foreach (var file in allFiles)
-                using (var fs = File.OpenRead(file))
+            var container = new Container(cfg =>
+            {
+                cfg.Scan(scanner =>
                 {
-                    var operation = await client.StartAnalyzeDocumentAsync("prebuilt-document", fs);
-                    await operation.WaitForCompletionAsync();
+                    scanner.AssemblyContainingType<Program>();
+                    scanner.WithDefaultConventions();
+                });
 
-                    var result = operation.Value;
+                cfg.For<AppSettings>().Use(settings).Singleton();
+            });
 
-                    Console.WriteLine("Detected key-value pairs:");
 
-                    foreach (var kvp in result.KeyValuePairs)
-                        if (kvp.Value == null)
-                            Console.WriteLine($"  Found key with no value: '{kvp.Key.Content}'");
-                        else
-                            Console.WriteLine($"  Found key-value pair: '{kvp.Key.Content}' and '{kvp.Value.Content}'");
-
-                }
+            var useCase = container.GetInstance<IRecognizeCertificates>();
+            await useCase.ExecuteAsync();
 
             Console.ReadKey();
         }
