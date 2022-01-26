@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\MyGit\\Personal\\CertificateRecognizer\\Sources\\Application\\Mmu.CertificateRecognizer.csproj": {}
+    "C:\\MyGit\\Personal\\CertificatesRecognizer\\Sources\\Application\\Mmu.CertificateRecognizer.csproj": {}
   },
   "projects": {
-    "D:\\MyGit\\Personal\\CertificateRecognizer\\Sources\\Application\\Mmu.CertificateRecognizer.csproj": {
+    "C:\\MyGit\\Personal\\CertificatesRecognizer\\Sources\\Application\\Mmu.CertificateRecognizer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\MyGit\\Personal\\CertificateRecognizer\\Sources\\Application\\Mmu.CertificateRecognizer.csproj",
+        "projectUniqueName": "C:\\MyGit\\Personal\\CertificatesRecognizer\\Sources\\Application\\Mmu.CertificateRecognizer.csproj",
         "projectName": "Mmu.CertificateRecognizer",
-        "projectPath": "D:\\MyGit\\Personal\\CertificateRecognizer\\Sources\\Application\\Mmu.CertificateRecognizer.csproj",
-        "packagesPath": "C:\\Users\\Matthias PC\\.nuget\\packages\\",
-        "outputPath": "D:\\MyGit\\Personal\\CertificateRecognizer\\Sources\\Application\\obj\\",
+        "projectPath": "C:\\MyGit\\Personal\\CertificatesRecognizer\\Sources\\Application\\Mmu.CertificateRecognizer.csproj",
+        "packagesPath": "C:\\Users\\mlm\\.nuget\\packages\\",
+        "outputPath": "C:\\MyGit\\Personal\\CertificatesRecognizer\\Sources\\Application\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Matthias PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mlm\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -23,7 +26,7 @@
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {},
-          "https://pkgs.dev.azure.com/DrMueller/_packaging/DrMuellersFeed/nuget/v3/index.json": {}
+          "https://drmueller.pkgs.visualstudio.com/_packaging/DrMuellersFeed/nuget/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {

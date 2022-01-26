@@ -4,7 +4,6 @@ using System.Threading.Tasks;
 using Lamar;
 using Microsoft.Extensions.Configuration;
 using Mmu.CertificateRecognizer.Areas.UseCase;
-using Mmu.CertificateRecognizer.Infrastructure;
 using Mmu.CertificateRecognizer.Infrastructure.Settings;
 
 namespace Mmu.CertificateRecognizer
@@ -20,17 +19,18 @@ namespace Mmu.CertificateRecognizer
 
             var settings = new AppSettings();
             configRoot.Bind("AppSettings", settings);
-            var container = new Container(cfg =>
-            {
-                cfg.Scan(scanner =>
+            var container = new Container(
+                cfg =>
                 {
-                    scanner.AssemblyContainingType<Program>();
-                    scanner.WithDefaultConventions();
+                    cfg.Scan(
+                        scanner =>
+                        {
+                            scanner.AssemblyContainingType<Program>();
+                            scanner.WithDefaultConventions();
+                        });
+
+                    cfg.For<AppSettings>().Use(settings).Singleton();
                 });
-
-                cfg.For<AppSettings>().Use(settings).Singleton();
-            });
-
 
             var useCase = container.GetInstance<IRecognizeCertificates>();
             await useCase.ExecuteAsync();

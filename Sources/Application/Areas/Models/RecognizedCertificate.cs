@@ -1,20 +1,22 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Mmu.CertificateRecognizer.Areas.Models
-{ 
+{
     public class RecognizedCertificate
     {
-        public string Name { get; }
+        public string CertificateName { get; }
         public DateTime Issued { get; }
+        public string OriginalFilePath { get; }
         public DateTime? ValidTo { get; }
 
-        public RecognizedCertificate(string name, DateTime issued, DateTime? validTo)
+        public RecognizedCertificate(
+            string originalFilePath,
+            string certificateName,
+            DateTime issued,
+            DateTime? validTo)
         {
-            Name = name;
+            OriginalFilePath = originalFilePath;
+            CertificateName = certificateName;
             Issued = issued;
             ValidTo = validTo;
         }

@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using Azure;
 using Azure.AI.FormRecognizer.DocumentAnalysis;
-using Mmu.CertificateRecognizer.Infrastructure;
 using Mmu.CertificateRecognizer.Infrastructure.Settings;
 
 namespace Mmu.CertificateRecognizer.Areas.Services.Servants.Implementation
