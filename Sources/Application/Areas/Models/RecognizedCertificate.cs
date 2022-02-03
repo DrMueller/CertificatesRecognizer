@@ -9,6 +9,8 @@ namespace Mmu.CertificateRecognizer.Areas.Models
         public string OriginalFilePath { get; }
         public DateTime? ValidTo { get; }
 
+        public bool HasValidationEndDate => ValidTo.HasValue;
+
         public RecognizedCertificate(
             string originalFilePath,
             string certificateName,

@@ -62,7 +62,6 @@ D:\MyGit\Personal\CertificateRecognizer\Sources\Application\bin\Debug\net5.0\Sys
 D:\MyGit\Personal\CertificateRecognizer\Sources\Application\bin\Debug\net5.0\System.Runtime.CompilerServices.Unsafe.dll
 D:\MyGit\Personal\CertificateRecognizer\Sources\Application\bin\Debug\net5.0\System.Text.Encodings.Web.dll
 D:\MyGit\Personal\CertificateRecognizer\Sources\Application\bin\Debug\net5.0\System.Text.Json.dll
-D:\MyGit\Personal\CertificateRecognizer\Sources\Application\obj\Debug\net5.0\Mmu.CertificateRecognizer.csproj.AssemblyReference.cache
 D:\MyGit\Personal\CertificateRecognizer\Sources\Application\obj\Debug\net5.0\Mmu.CertificateRecognizer.GeneratedMSBuildEditorConfig.editorconfig
 D:\MyGit\Personal\CertificateRecognizer\Sources\Application\obj\Debug\net5.0\Mmu.CertificateRecognizer.AssemblyInfoInputs.cache
 D:\MyGit\Personal\CertificateRecognizer\Sources\Application\obj\Debug\net5.0\Mmu.CertificateRecognizer.AssemblyInfo.cs
@@ -112,3 +111,7 @@ C:\MyGit\Personal\CertificatesRecognizer\Sources\Application\obj\Debug\net5.0\Mm
 C:\MyGit\Personal\CertificatesRecognizer\Sources\Application\obj\Debug\net5.0\ref\Mmu.CertificateRecognizer.dll
 C:\MyGit\Personal\CertificatesRecognizer\Sources\Application\obj\Debug\net5.0\Mmu.CertificateRecognizer.pdb
 C:\MyGit\Personal\CertificatesRecognizer\Sources\Application\obj\Debug\net5.0\Mmu.CertificateRecognizer.genruntimeconfig.cache
+D:\MyGit\Personal\CertificateRecognizer\Sources\Application\bin\Debug\net5.0\BaselineTypeDiscovery.dll
+D:\MyGit\Personal\CertificateRecognizer\Sources\Application\bin\Debug\net5.0\Lamar.dll
+D:\MyGit\Personal\CertificateRecognizer\Sources\Application\bin\Debug\net5.0\LamarCodeGeneration.dll
+D:\MyGit\Personal\CertificateRecognizer\Sources\Application\obj\Debug\net5.0\Mmu.CertificateRecognizer.csproj.AssemblyReference.cache

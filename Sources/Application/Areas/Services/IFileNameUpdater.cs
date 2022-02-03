@@ -6,6 +6,6 @@ namespace Mmu.CertificateRecognizer.Areas.Services
 {
     public interface IFileNameUpdater
     {
-        Task UpdateFilenamesAsync(IReadOnlyCollection<RecognizedCertificate> certificates);
+        void UpdateFilenames(IReadOnlyCollection<RecognizedCertificate> certificates);
     }
 }

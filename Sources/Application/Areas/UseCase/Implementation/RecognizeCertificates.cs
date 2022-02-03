@@ -29,7 +29,7 @@ namespace Mmu.CertificateRecognizer.Areas.UseCase.Implementation
             _outputWriter.Write(certificates);
 
             Console.WriteLine("Updating filenames..");
-            await _fileNameUpdater.UpdateFilenamesAsync(certificates);
+            _fileNameUpdater.UpdateFilenames(certificates);
 
             Console.WriteLine("Finished.");
         }

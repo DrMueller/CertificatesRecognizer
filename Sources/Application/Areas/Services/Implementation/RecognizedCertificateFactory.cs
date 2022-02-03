@@ -12,6 +12,7 @@ namespace Mmu.CertificateRecognizer.Areas.Services.Implementation
     public class RecognizedCertificateFactory : IRecognizedCertificateFactory
     {
         private readonly IFormAnalyzer _formAnalyzer;
+        public const string FilePath = @"D:\MyGit\Personal\Data.Certificates\Weiterbildungen\Microsoft";
 
         public RecognizedCertificateFactory(IFormAnalyzer formAnalyzer)
         {
@@ -20,8 +21,6 @@ namespace Mmu.CertificateRecognizer.Areas.Services.Implementation
 
         public async Task<IReadOnlyCollection<RecognizedCertificate>> CreateAllAsync()
         {
-            const string FilePath = @"C:\MyGit\Personal\Data.Certificates\Weiterbildungen\Microsoft";
-
             var allFiles = Directory.GetFiles(FilePath, "*.*", SearchOption.AllDirectories);
             var result = new ConcurrentBag<RecognizedCertificate>();
 
